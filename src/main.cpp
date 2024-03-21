@@ -5,7 +5,7 @@
 #define SAMPLE_RATE     100     // Sampling rate in Hz
 #define ORIGINAL_SIZE   100     // Original size of the sample
 #define PADDED_SIZE     128     // Size of the padded sample
-#define TEST            0
+#define TEST            1
 
 
 int newTime;
@@ -79,7 +79,6 @@ void loop() {
         Serial.println((double)energy, 5); // Separate plot for energy
     
         // Update LED brightness
-        updateLED(energy);
         float elapsedTimePerSampleUs = (micros() - newTime);
         Serial.print("Time per sample (us): ");
         Serial.println(elapsedTimePerSampleUs);
